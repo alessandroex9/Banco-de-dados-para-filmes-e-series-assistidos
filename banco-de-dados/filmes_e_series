@@ -1,0 +1,25 @@
+CREATE DATABASE Filmes_e_series
+    DEFAULT CHARACTER SET = utf8
+    DEFAULT COLLATE = utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS Filmes (
+    Id int(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Nome varchar(50) NOT NULL DEFAULT '',
+    Tipo ENUM('Filme', 'Documentario', 'Longa', 'Curta'),
+    StreamersId int(5) NOT NULL, FOREIGN KEY (StreamersId) REFERENCES Streamer(Id),
+    Data_que_foi_visto DATE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Series (
+    Id int(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Nome varchar(50) NOT NULL DEFAULT '',
+    Tipo ENUM('Série', 'Serie Documentária', 'Mini Série', 'Anime'), 
+    StreamersId int(5) NOT NULL, FOREIGN KEY (StreamersId) REFERENCES Streamer(Id),
+    Data_que_foi_visto DATE NOT NULL,
+    FOREIGN KEY (StreamersId) REFERENCES Streamer(Id)
+);
+
+CREATE TABLE IF NOT EXISTS Streamer (
+    Id int(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Nome char(50) NOT NULL 
+)

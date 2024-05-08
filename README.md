@@ -1,2 +1,13 @@
-# Banco-de-dados-para-filmes-e-series-assistidos
- Banco de Dados em mysql para organizar filmes e series assitidos
+<p aling='center'>
+    <img src="imagens/GitHub com fundo.png"/>
+</p>
+
+# Banco de Dados em MYSQL
+# Descrição do Projeto
+Banco de dados com MYSql desenvolvido na faculdade.
+<p aling='center'>
+    <img src="imagens/em finalizado 2.png">
+</p>
+
+# Ferramentas Utilizadas
+<img src="imagens/MySQL_logo.png">
